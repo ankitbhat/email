@@ -24,3 +24,11 @@ echo valid email id
 else
 echo invalid email id
 fi
+echo Enter Phone number
+read phone
+if [[ $phone =~ ^([0-9]{2})+[" "][0-9]{10}$ ]]
+then
+echo valid phone number
+else
+echo invalid phone number
+fi
