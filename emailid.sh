@@ -34,7 +34,7 @@ echo invalid phone number
 fi
 echo Enter password
 read password
-if [[ $password =~ ^([a-z0-9!@#%^&*]*)([A-Z]+)([a-z0-9!@#%^&*]*){8,}$ ]]
+if [[ $password =~ ^([a-zA-Z0-9!@#%^&*]*)([A-Z]+)([a-zA-Z0-9!@#%^&*]*){8,}$ ]]
 then
 	if [[ $password =~ ^([a-zA-Z!@#%^&*]*)([0-9]+)([a-zA-Z!@#%^&*]*){8,}$ ]]
 	then
