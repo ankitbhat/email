@@ -32,3 +32,11 @@ echo valid phone number
 else
 echo invalid phone number
 fi
+echo Enter password
+read password
+if [[ $password =~ ^[a-zA-Z0-9]{8}$ ]]
+then
+echo valid password
+else
+echo invalid password
+fi
