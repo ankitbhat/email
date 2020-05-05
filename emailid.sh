@@ -38,10 +38,15 @@ if [[ $password =~ ^([a-zA-Z0-9!@#%^&*]*)([A-Z]+)([a-zA-Z0-9!@#%^&*]*){8,}$ ]]
 then
 	if [[ $password =~ ^([a-zA-Z0-9!@#%^&*]*)([0-9]+)([a-zA-Z0-9!@#%^&*]*){8,}$ ]]
 	then
-	echo valid password
+		if [[ $password =~ ^([a-zA-Z0-9]*)([!@#%^&*]{1})([a-zA-Z0-9]*){8,}$ ]]
+		then
+		echo valid password
+		else
+		echo invalid password
+		fi
 	else
 	echo invalid password
 	fi
-else 
+else
 echo invalid password
 fi
