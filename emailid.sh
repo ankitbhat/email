@@ -36,7 +36,12 @@ echo Enter password
 read password
 if [[ $password =~ ^([a-z0-9!@#%^&*]*)([A-Z]+)([a-z0-9!@#%^&*]*){8,}$ ]]
 then
-echo valid password
-else
+	if [[ $password =~ ^([a-zA-Z!@#%^&*]*)([0-9]+)([a-zA-Z!@#%^&*]*){8,}$ ]]
+	then
+	echo valid password
+	else
+	echo invalid password
+	fi
+else 
 echo invalid password
 fi
