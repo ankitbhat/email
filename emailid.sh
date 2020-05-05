@@ -1,4 +1,4 @@
-#!/bin/bash -x
+!/bin/bash -x
 shopt -s extglob
 echo Enter First Name
 read fname
